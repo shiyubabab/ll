@@ -18,7 +18,7 @@ typedef struct {
     ptrdiff_t prev;
     ptrdiff_t next;
     Word value;
-} mlxh_t;
+} LL_ALIGN mlxh_t;
 
 // 查找回调：按字符串匹配
 int cmp_word(void *node, void *user_data) {
