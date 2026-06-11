@@ -129,7 +129,8 @@ void ll__dump(void *ll, size_t node_size, size_t prev_offset, size_t next_offset
 
 #endif // LL_H_
 
-#ifdef LL_IMPLEMENTATION
+#if defined(LL_IMPLEMENTATION) && !defined(LL_IMPLEMENTATION_DONE)
+#define LL_IMPLEMENTATION_DONE
 
 ll__header *ll__grow(ll__header *header, size_t node_size)
 {
